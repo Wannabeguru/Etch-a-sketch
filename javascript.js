@@ -15,6 +15,7 @@ function createGrid(rows, cols){
 
 
 
+// function to change boxes on mouseDown while hovering over other boxes.
 function toBlack() {
    const boxes = document.querySelectorAll('.gridboxes');
     boxes.forEach((box) => {
@@ -42,6 +43,6 @@ blkBtn.addEventListener('click', toBlack);
 
 
 
-createGrid(16,16)
+createGrid(100,100)
 
 
