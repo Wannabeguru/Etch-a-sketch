@@ -1,0 +1,20 @@
+body{
+    background: rgb(184, 190, 184);
+    flex-direction: column;
+}
+
+.canvasContainer {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-rows),1fr);
+    grid-template-rows: repeat(var(--grid-cols),1fr);
+    max-height:  50vh;
+    min-height: 50vh;
+    max-width: 50vh;
+    min-height: 50vh;
+    gap: 1px;
+    margin-top: 4rem;
+}
+
+.gridboxes{
+    border: red solid;
+}
