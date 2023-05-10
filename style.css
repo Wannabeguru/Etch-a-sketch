@@ -1,6 +1,33 @@
 body{
-    background: rgb(184, 190, 184);
-    flex-direction: column;
+    background: rgb(184, 190, 184);  
+    font-family Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+
+}
+
+
+.buttonsContainer{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+    background-color: rgba(0,0,0,0.1);
 }
 
 .canvasContainer {
@@ -13,8 +40,4 @@ body{
     min-height: 50vh;
     gap: 1px;
     margin-top: 4rem;
-}
-
-.gridboxes{
-    border: red solid;
 }
