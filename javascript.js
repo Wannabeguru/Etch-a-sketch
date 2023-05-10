@@ -67,6 +67,10 @@ rainbowBtn.addEventListener('click', () => {
     });
 });
 
+const eraseButton = document.getElementById('eraseButton');
+eraseButton.addEventListener('click', () => {
+    currentColor = 'rgb(184, 190, 184)';
+});
 
 
 
