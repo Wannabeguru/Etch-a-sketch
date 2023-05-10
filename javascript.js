@@ -22,16 +22,14 @@ function toColor() {
     boxes.forEach((box) => {
         box.addEventListener('mousedown', () => {
             isMousedown = true;
-            box.style.backgroundColor = color;
+            box.style.backgroundColor = currentColor;
         });
     box.addEventListener('mouseover', () => {
         if(isMousedown) {
-            box.style.backgroundColor = 'black';
+            box.style.backgroundColor = currentColor;
         }
-    box.addEventListener('mouseup', () => {
-        isMousedown = false;
-    })
-    })
+ 
+    });
    
 });
 }
@@ -84,6 +82,8 @@ eraseButton.addEventListener('click', () => {
         });
     });
 });
+
+
 
 const colorPicker = document.getElementById('colorPicker');
 const colorInput = document.getElementById('colorInput');
