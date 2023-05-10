@@ -40,6 +40,9 @@ document.addEventListener('mouseup', () => {
 
 //adds click functionality to the black button and enables the changing of the boxes.
 const blkBtn = document.getElementById('blkBtn');
-blkBtn.addEventListener('click', toBlack);
+blkBtn.addEventListener('click', () => {
+    currentColor = 'black';
+        toColor(currentColor);
+});
 
-createGrid(25,25)
+
