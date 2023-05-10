@@ -1,6 +1,5 @@
 let isMousedown = false;
 let currentColor = 'black';
-
 //makes grid
 function createGrid(rows, cols){
     const getCanvas = document.getElementById('canvas');
@@ -13,9 +12,6 @@ function createGrid(rows, cols){
     }
 
 }
-
-
-
 // function to change boxes on mouseDown while hovering over other boxes.
 function toColor() {
    const boxes = document.querySelectorAll('.gridboxes');
@@ -34,20 +30,25 @@ function toColor() {
 });
 }
 
+function promptMe () {
+    const rows = parseInt(prompt('Enter number of rows'));
+    const cols = parseInt(prompt('Enter number of columns'));
+    if (isNaN(rows) || isNaN(cols)){
+        alert('Invalid input. Please enter a number.');
+        return;
+    }
+    createGrid(rows,cols);
+}
 //if mouse button goes up, change global isMousdown Variable to false;
 document.addEventListener('mouseup', () => {
     isMousedown = false;
 });
-
 //adds click functionality to the black button and enables the changing of the boxes.
 const blkBtn = document.getElementById('blkBtn');
 blkBtn.addEventListener('click', () => {
     currentColor = 'black';
         toColor(currentColor);
 });
-
-
-
 //rainbow button
 const rainbowBtn = document.getElementById('rainbowBtn');
 rainbowBtn.addEventListener('click', () => {
@@ -64,9 +65,6 @@ rainbowBtn.addEventListener('click', () => {
         });
     });
 });
-
-
-
 const eraseButton = document.getElementById('eraseButton');
 eraseButton.addEventListener('click', () => {
     const boxes = document.querySelectorAll('.gridboxes');
@@ -82,9 +80,6 @@ eraseButton.addEventListener('click', () => {
         });
     });
 });
-
-
-
 const colorPicker = document.getElementById('colorPicker');
 const colorInput = document.getElementById('colorInput');
 colorPicker.addEventListener('click', () => {
@@ -105,7 +100,3 @@ clear.addEventListener('click', () => {
     });
     
 });
-
-
-
-createGrid(25,25)
