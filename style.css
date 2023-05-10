@@ -36,8 +36,14 @@ h1 {
     grid-template-rows: repeat(var(--grid-cols),1fr);
     max-height:  50vh;
     min-height: 50vh;
-    max-width: 50vh;
     min-height: 50vh;
+    min-width: 50vh;
     gap: 1px;
-    margin-top: 4rem;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
