@@ -1,6 +1,7 @@
 let isMousedown = false;
+let currentColor = 'black';
 
-
+//makes grid
 function createGrid(rows, cols){
     const getCanvas = document.getElementById('canvas');
     getCanvas.style.setProperty('--grid-rows', rows);
@@ -16,12 +17,12 @@ function createGrid(rows, cols){
 
 
 // function to change boxes on mouseDown while hovering over other boxes.
-function toBlack() {
+function toColor() {
    const boxes = document.querySelectorAll('.gridboxes');
     boxes.forEach((box) => {
         box.addEventListener('mousedown', () => {
             isMousedown = true;
-            box.style.backgroundColor = 'black';
+            box.style.backgroundColor = color;
         });
     box.addEventListener('mouseover', () => {
         if(isMousedown) {
@@ -32,17 +33,13 @@ function toBlack() {
 });
 }
 
+//if mouse button goes up, change global isMousdown Variable to false;
 document.addEventListener('mouseup', () => {
     isMousedown = false;
 });
 
+//adds click functionality to the black button and enables the changing of the boxes.
 const blkBtn = document.getElementById('blkBtn');
 blkBtn.addEventListener('click', toBlack);
 
-
-
-
-
-createGrid(100,100)
-
-
+createGrid(25,25)
