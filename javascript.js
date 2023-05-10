@@ -57,11 +57,11 @@ rainbowBtn.addEventListener('click', () => {
     boxes.forEach((box) => {
         box.addEventListener('mousedown', () => {
             isMousedown = true;
-            box.style.backgroundColor = `hsl(${Math.random() * 360}), 100%, 50%`;
+            box.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
         });
         box.addEventListener('mouseover', () => {
             if(isMousedown) {
-                box.style.backgroundColor = `hsl(${Math.random() * 360}), 100%, 50%`;
+                box.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
             }
         });
     });
