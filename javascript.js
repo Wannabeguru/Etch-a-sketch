@@ -97,4 +97,6 @@ colorInput.addEventListener('change', () => {
 });
 
 
+
+
 createGrid(25,25)
