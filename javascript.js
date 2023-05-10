@@ -96,6 +96,15 @@ colorInput.addEventListener('change', () => {
     toColor(currentColor);
 });
 
+const clear = document.getElementById('clearCanvas');
+const canvas = document.getElementById('canvas');
+clear.addEventListener('click', () => {
+    const boxes = document.querySelectorAll('.gridboxes');
+    boxes.forEach((box) => {
+        box.style.backgroundColor = 'white';
+    });
+    
+});
 
 
 
