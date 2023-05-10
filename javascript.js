@@ -28,6 +28,9 @@ function toColor() {
         if(isMousedown) {
             box.style.backgroundColor = 'black';
         }
+    box.addEventListener('mouseup', () => {
+        isMousedown = false;
+    })
     })
    
 });
@@ -46,3 +49,25 @@ blkBtn.addEventListener('click', () => {
 });
 
 
+
+
+const rainbowBtn = document.getElementById('rainbowBtn');
+rainbowBtn.addEventListener('click', () => {
+    const boxes = document.querySelectorAll('.gridboxes');
+    boxes.forEach((box) => {
+        box.addEventListener('mousedown', () => {
+            isMousedown = true;
+            box.style.backgroundColor = `hsl(${Math.random() * 360}), 100%, 50%`;
+        });
+        box.addEventListener('mouseover', () => {
+            if(isMousedown) {
+                box.style.backgroundColor = `hsl(${Math.random() * 360}), 100%, 50%`;
+            }
+        });
+    });
+});
+
+
+
+
+createGrid(25,25)
