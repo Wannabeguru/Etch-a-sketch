@@ -50,7 +50,7 @@ blkBtn.addEventListener('click', () => {
 
 
 
-
+//rainbow button
 const rainbowBtn = document.getElementById('rainbowBtn');
 rainbowBtn.addEventListener('click', () => {
     const boxes = document.querySelectorAll('.gridboxes');
@@ -71,7 +71,18 @@ rainbowBtn.addEventListener('click', () => {
 
 const eraseButton = document.getElementById('eraseButton');
 eraseButton.addEventListener('click', () => {
-    currentColor = 'rgb(184, 190, 184)';
+    const boxes = document.querySelectorAll('.gridboxes');
+    boxes.forEach((box) => {
+        box.addEventListener('mousedown', () => {
+            isMousedown = true;
+            box.style.backgroundColor = 'white';
+        });
+        box.addEventListener('mouseover', () => {
+            if(isMousedown) {
+                box.style.backgroundColor = 'white';
+            }
+        });
+    });
 });
 
 const colorPicker = document.getElementById('colorPicker');
