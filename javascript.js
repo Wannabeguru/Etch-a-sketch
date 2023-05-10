@@ -67,11 +67,23 @@ rainbowBtn.addEventListener('click', () => {
     });
 });
 
+
+
 const eraseButton = document.getElementById('eraseButton');
 eraseButton.addEventListener('click', () => {
     currentColor = 'rgb(184, 190, 184)';
 });
 
+const colorPicker = document.getElementById('colorPicker');
+const colorInput = document.getElementById('colorInput');
+colorPicker.addEventListener('click', () => {
+    colorInput.click();
+});
+
+colorInput.addEventListener('change', () => {
+    currentColor = colorInput.value;
+    toColor(currentColor);
+});
 
 
 createGrid(25,25)
